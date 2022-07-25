@@ -1,0 +1,801 @@
+
+/*---------------------------général--------------------------------*/
+
+body, .title_section{
+font-family:'Roboto', sans-serif; 
+margin:0 auto;
+font-size: 16px;
+}
+
+h1, h2, h4{
+font-family: 'Shrikhand', sans-serif;
+}
+
+main{
+background-color: #f6f6f6;
+}
+
+#restaurant, footer{
+padding: 1em 1em;
+}
+
+{
+  box-sizing:border-box; 
+}
+
+#container{
+width:100%;
+}
+
+.bone, #restaurant{
+background-color:#eee;
+}
+
+.title-teaches{
+margin-left:15px;
+}
+
+.Title_1, .title{
+color:hsla(207, 55%, 57%, 0.956);
+}
+
+/*------------ Bouton qui au survol la couleur de fond s'éclaircit, avec ombre visible----*/
+
+.bouton{
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 2rem 0 2rem 0;
+margin: 0 auto;
+margin-top: 3rem;
+border-radius: 50px;
+border: none;
+height: 50px;
+background:#FA8072;
+box-shadow: 0 6px 10px #0000004b;
+color:black;
+width: 60%;
+position: relative;
+z-index: 1;
+}
+  
+
+.bouton::after{
+content:".";
+font-size: 0;
+opacity: 0;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+background: #FAF0E6;
+box-shadow: 0 2px 4px black;
+opacity:0;
+z-index: -1;
+position: absolute;
+border-radius: 40px;
+  
+}
+  
+.bouton:hover::after{
+opacity:1;
+}
+/*-------------Fin Bouton------------*/  
+
+ul{
+list-style: none;
+margin:unset;
+}
+
+img{
+object-fit: cover;
+}
+
+a{
+text-decoration: none;
+color: unset;
+}
+
+/*-------------Loader animation type spinner avant le chargement de ma page + @keyframes ----------------*/
+
+.loader-wrapper {
+width: 100%;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: hsla(207, 55%, 57%, 0.956);
+animation: loader-wrapper 1000ms 4000ms ease-in-out forwards; 
+}
+
+@keyframes loader-wrapper{
+0%{opacity:1;
+}
+100%{
+opacity:0;
+height:0;
+visibility:hidden;
+}
+}
+
+.loader-box {
+height: 300px;
+width: 100%;
+display:flex; 
+align-items: center;
+justify-content: center;
+}
+  
+@keyframes loader-box{
+0%{
+opacity:0;
+}
+100%{
+opacity:0;
+}
+}
+
+.icon {
+font-size: 3rem;
+transform: scale(1);
+background-color: rgb(255, 255, 255);
+border-radius: 150px;
+height: 150px;
+width: 150px;
+display: flex;
+align-items: center;
+justify-content: center;
+animation: loaderSize 2.5s infinite ease-in-out, loaderColor 4.5s infinite ease-in-out,
+loaderCircle 1000ms 4000ms ease-in-out forwards ;
+color: #9356DC;;
+color: #9356DC;
+box-shadow: 0 0 15px #fff;
+}
+
+
+@keyframes loaderCircle {50% {
+opacity: 0;
+}
+100% {
+visibility: hidden;
+height: 0;
+opacity: 0;
+overflow: hidden;
+}
+
+
+}
+@keyframes loaderSize {
+0% {
+transform: scale(1) rotate(0);
+}
+16% {
+transform: scale(0) rotate(0);
+}
+50% {
+transform: scale(1) rotate(0);
+}
+80% {
+transform: scale(1) rotate(-360deg);
+}
+100% {
+transform: scale(1) rotate(-360deg);
+}
+}
+
+@keyframes loaderColor {
+5% {
+color: hsla(207, 55%, 57%, 0.956);
+}
+10% {
+color:#FA8072 ;
+}
+39% {
+color:#FA8072 ;
+}
+    
+40% {
+color: hsla(207, 55%, 57%, 0.956);
+}
+100% {
+color:hsla(207, 55%, 57%, 0.956);
+}
+}
+  /*----------------Fin de l' animation spinner----------*/
+
+/*----------Apparition de ma page d' accueil + @Keyframes-----------------*/
+
+.index {
+width: 100%;
+height: 0;
+overflow: hidden;
+animation: index 1000ms 3500ms linear forwards; 
+}
+
+@keyframes index {
+100% {
+height: 100%;
+visibility: visible;
+}
+}
+
+
+/*-----------------Haut de page logo-----------------*/
+
+.logo{
+margin:1em 0;
+}
+
+.logo a{
+display:flex;
+justify-content: center;
+align-items: center;
+}
+
+.logo img{
+width: 60%;
+object-fit: cover;
+}
+
+.logo i{
+position: absolute;
+left: 1em; 
+}
+
+/*------------------Block Découverte et Recherche avec effet d' ombre----------------*/
+
+.research_form{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height:3em;
+background-color:#eee;
+box-shadow:inset 0 0.1em 0.3em grey ;
+}
+
+#discover{
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+
+#site-search{
+text-align: center;
+border: none;
+background-color: transparent;
+font-weight: bold;
+}
+
+.research_form i{
+align-items: center;
+padding-bottom: 3px;
+color: hsl(34deg 5% 24%);
+}
+
+.title, .subtitle{
+text-align: center;
+line-height:1em ;
+
+}
+
+.bone{
+display: flex;
+align-items: center;
+flex-direction: column;
+padding: 0 0 2em 0;
+}
+
+
+
+/*------------------Section Fonctionnement et Choix animation avec animation au survol------------------*/
+
+#Fonctionnement{
+padding: 1em 1em;
+background: white;
+}
+
+.section_choice{
+display: flex;
+flex-wrap: wrap;
+background:hsla(207, 55%, 57%, 0.956);
+border-radius: 1em;
+margin: 1em 0.5em;
+box-shadow: 0 0.1em 0.2em lightgrey;
+transition: 500ms;
+}
+
+.section_choice span{
+display:flex;
+align-items: center;
+justify-content: center;
+width: 22px;
+height: 22px;
+border-radius: 50%;
+background: #FA8072;
+color: black;
+position: relative;
+margin-top: 1em;
+left:-0.5em;
+}
+
+.section_choice i{
+margin-top: 1.2em;
+color:#FAF0E6;
+margin-left: 0.25em;
+}
+
+.section_choice p{
+font-weight: bold;
+margin-left: 1em;
+margin-left: 0.50em;
+color: black;
+} 
+
+.section_choice:hover{
+background-color:#FA8072;
+}
+.section_choice:hover i{
+color: color: hsla(207, 55%, 57%, 0.956);
+}
+
+/*-----------------Section Restaurant------------*/
+
+#auberge .card img{
+width: 100%;
+max-width:100%;
+height: 200px;
+border-radius:1rem 1rem 0 0;
+}
+
+/*-----------animation zoom sur carte restaurant-------------*/
+
+#auberge div .card:hover{
+transform: scale(0.95);
+}
+
+#auberge .card{
+background-color: #fff;
+border-radius: 1em;
+position: relative;
+box-shadow: 0 2px 4px grey;
+margin: 1em;
+transform: scale(1);
+transition: .3s ease-in-out;
+}
+
+#auberge .card a{
+display: block;
+}
+
+#auberge .new{
+font-weight: bold;
+position: absolute;
+border-radius: 0.30em;
+background-color:rgb(183, 236, 183) ;
+color: rgb(67, 189, 132);
+right:0.75em;
+top: 0.75em;
+padding: 0 1em;
+}
+
+#auberge .card-information{
+padding: 1em 0.5em 0.5em 1em;
+}
+
+#auberge .card h3, #auberge .card p{
+margin: 0;
+}
+
+/*-------------Animation bouton like coeur +@keyframes--------------*/
+
+.bouton_like{
+font-size:24px;
+font-weight:100;
+position: absolute;
+bottom: 25px;
+right:20px;      
+}
+ 
+#bouton_like  {
+-webkit-text-fill-color: #f6f6f6;
+}
+
+.bouton_like {
+-webkit-text-fill-color: white;
+-webkit-text-stroke-width: 2px;
+-webkit-text-stroke-color: black; 
+cursor:pointer; 
+}
+
+
+.bouton_like:hover {
+animation: color_fill 1.5s ease-out 1 forwards;
+}
+
+@keyframes color_fill {
+  0% {
+background: linear-gradient(#9356DC, #FF79DA);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+opacity: 0;
+-webkit-text-stroke: unset;
+}
+  100% {
+background: linear-gradient(0deg, #ff79da, #9356dc);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+opacity: 1;
+-webkit-text-stroke: unset;
+}
+}
+/*-------------Fin de l' animation bouton like coeur--------------*/
+
+
+/*-----------------Page menus Restaurant général--------------*/
+.jacket{
+display: block;
+z-index: 0;
+position: relative;
+}
+
+.jacket img{
+width: 100%;
+object-fit: cover;
+height:17em;
+}
+
+.logo{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.header_menu{
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding-right:3rem;
+position: relative;
+}
+
+.Title_1{
+font-size: 20px;
+font-weight:390;
+padding-top: 20px;
+margin-left: 15px;
+}
+
+
+/*---------Surlignement du Titre restaurant de moitié--------*/
+.Title_1{
+border-bottom: 3px solid #99E2D0;
+font-size: 1.3em;
+font-weight: 500;
+width:10%;
+}
+/*-----------Fin de surlignement des titres--------------*/
+
+/*------------Section menus et plats----------------*/
+
+.section-menu{
+border-radius: 50px 50px 0 0;
+background-color: #f6f6f6;
+position: relative;
+top: -50px;
+width:100%;
+}
+
+.card_choice{
+margin: 1rem 0.7rem 1rem 0.9rem;
+box-shadow: 0 1px 6px;
+border-radius: 1rem;
+background-color: #fff;
+display: flex;
+width: 92%;
+flex-direction: row-reverse;
+justify-content: flex-end;
+overflow: hidden;
+}
+
+.content{
+display: flex;
+flex-direction: column;
+width: 90%;
+margin-left: 1.5rem;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.text{
+display: flex;
+justify-content: space-between;
+font-size: 1em;
+}
+.choice_title{
+margin: 1rem 0 0 0;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+font-size: 1em;
+}
+  
+#block-compo{
+width:100%;
+}
+
+.fill{
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+  
+p{
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis; 
+}
+
+.price{
+margin-right:1rem;
+font-weight:bold;  
+}
+
+/*------Section menuS et plats avec animation------------*/
+
+.fa-check-circle {
+font-size:1.3rem;
+}
+
+.card_choice:hover .fa-check-circle{
+animation:rotation;
+transition-duration: 1s;
+transform:rotate(360deg);  
+}
+
+.price{
+transition: all 500ms ease-in-out;
+}
+ 
+.card_choice:hover .price{
+animation:decalage_prix;
+transition: 500ms ease-out;
+}
+
+.card_choice:hover .check_circle{
+animation:decalage;
+transform:translateY(0);
+visibility:visible;
+width:40px;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+transition:all 500ms ease-in-out; 
+}
+
+.check_circle{
+background:#FA8072;
+color: #fff;
+border-radius: 0 1rem 1rem 0;
+overflow: hidden;
+visibility: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: all 500ms ease-in-out;
+transform: translate(100px);
+width: 0px;
+}
+
+
+/*-----------@keyframes animation choix des plats-----------*/
+
+@keyframes decalage_prix{
+from{transform:translate(0%);
+}
+  
+to{
+transform:translate(-50%);
+} 
+}
+  
+@keyframes rotation{
+from{
+transform: rotate(0deg);
+}
+to{
+transform: rotate(360deg);
+} 
+}
+
+/*------apparition progressive des menus keyframes----------*/
+
+.choice_3{
+animation: fadeIn 3s ease-in-out both; 
+}
+
+.choice_2{
+animation: fadeIn 2s ease-in-out both;
+}
+
+.choice_1{
+animation: fadeIn 1s ease-in-out both;
+}
+
+@keyframes fadeIn {
+0% {
+opacity: 0;
+transform: translate3d(0, 50%, 0);
+}
+
+100% {
+opacity: 1;
+transform: translate3d(0, 0, 0);
+}
+}
+
+
+ 
+
+/*---------------------Footer------------------*/
+
+footer{
+background-color: hsla(207, 55%, 57%, 0.956);
+}
+
+footer ul{
+list-style: none;
+padding:0;
+}
+
+footer .fas{
+margin-right: 1em;
+}
+
+.title_footer{
+font-weight: 200;
+font-size: 1em;
+}
+
+footer .fa-hands-helping{
+font-size: 0.8em;
+}
+
+/*-------------Footer change de couleur au survol--------------*/
+footer a{
+color: #fff;
+transition:color 2s;
+}
+
+footer a:hover{
+color:#FA8072;
+}
+
+/*----------Fin du Footer-----------*/
+
+/*------------------ VERSION DESKOP---------------------*/
+
+@media screen and (min-width: 992px) {
+.logo img{
+width:40%;
+}
+#Fonctionnement div  {
+display: flex;
+width: 100%;
+margin:15px;
+}
+    
+#Fonctionnement .title_section {
+text-align:center;
+}
+
+#restaurant .card img {
+height: 18em;
+width:100vh;
+}
+
+#restaurant div .card-information{
+flex-direction:column; 
+}
+
+.jacket img{
+height:400px;
+}
+
+.block-compo{
+display:flex;
+justify-content:center;
+}
+
+.menu_cards{
+width:45%;
+padding-left:15px;
+}
+
+.content{
+margin-left:1rem;
+}
+
+.button{
+width:30%;
+}
+
+footer {
+flex-direction: column;
+text-align: center;
+}
+
+footer nav ul {
+display: flex;
+justify-content: center;
+}
+
+footer nav ul li {
+margin: 0 1em;
+} 
+}
+
+/*------------Version tablette----------*/
+
+@media screen and (min-width: 768px) {
+
+#Fonctionnement { 
+align-items: center;
+display:flex;
+flex-direction: column;
+}
+
+#Fonctionnement  div {
+width: 100%;
+}
+
+#restaurant {
+align-items:center;
+display:flex;
+flex-direction: column;
+}
+
+#restaurant div {
+display:flex;
+flex-wrap:wrap;
+} 
+
+#restaurant div .card {
+flex-basis:35%;
+margin-left:10%;
+}
+
+#restaurant div .card-information{
+padding:0 4em 1em 0.5em;  
+}  
+
+#restaurant .card img{
+  width:100vh;
+}  
+
+#restaurant .card h3, #restaurant.card p{
+margin:3px;
+}  
+
+.block-compo{
+margin:1em 7em;
+width:75%;
+}
+
+footer {
+flex-direction:column;
+text-align:center;
+}
+
+.title_footer{
+font-size:1.8em;
+} 
+}
+    
+  
+
+    
